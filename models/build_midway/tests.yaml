@@ -1,0 +1,23 @@
+version: 2
+
+models: 
+  - name: s2_company
+    description: "This is our dim table that include all the information available for the different companies posting jobs. each row represent 1 company"
+    columns: 
+      - name: company_id
+        description: "This is a unique identifier for company table"
+        data_tests: 
+        - unique
+        - not_null
+        - relationships:
+            arguments:
+              to: ref('s2_job_postings')
+              field: company_id
+  - name: s2_job_postings
+    description: "this is the fact table with complete info of the transactional data.
+    1 row represents 1 job posted"
+    columns:
+      - name: job_id
+        description: "This is the unique key in the table"
+        data_tests:
+        - unique

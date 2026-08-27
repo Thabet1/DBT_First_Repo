@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: fct_job_postings
+    description: "the fact table with all transactional data for jobs posted"
+    columns:
+      - name: job_id
+        description: "the unique key for the fact table"
+        data_tests:
+          - unique
+          - not_null
+      - name: job_no_degree_mention
+        description: "this is to provide information on whether this job requires a degree or no"
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: job_schedule_type
+        description: "this is to provide information on what jobs are full-time/part-time etc.."  

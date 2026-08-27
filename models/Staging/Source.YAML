@@ -1,0 +1,11 @@
+version: 2
+sources:
+  - name: raw
+    database: MY_FIRST_SNOWFLAKE_DATABASE
+    schema: RAW_AREA
+
+    tables:
+      - name: company_dim
+      - name: skills_dim
+      - name: job_postings_fact
+      - name: skills_job_dim

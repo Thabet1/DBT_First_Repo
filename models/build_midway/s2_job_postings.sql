@@ -1,0 +1,1 @@
+select * from {{ref('s1_job_postings')}}
