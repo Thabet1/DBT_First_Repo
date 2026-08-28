@@ -8,4 +8,10 @@ sources:
       - name: company_dim
       - name: skills_dim
       - name: job_postings_fact
+        config:
+          freshness:
+            warn_after:
+              count: 24
+              period: hour
+          loaded_at_field: job_posted_date
       - name: skills_job_dim
