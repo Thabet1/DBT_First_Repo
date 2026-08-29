@@ -55,7 +55,6 @@ models:
 
     build_midway:
       +schema: build_s2
-      
-    build_analysis_ready:
-      +schema: build_s3
+
+
     
