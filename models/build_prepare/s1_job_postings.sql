@@ -8,3 +8,4 @@ salary_year_avg,
 salary_hour_avg,
 job_posted_date
 FROM {{ source ('raw', 'job_postings_fact')}}
+-- comment for CI day 2
