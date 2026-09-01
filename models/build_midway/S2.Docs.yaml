@@ -21,3 +21,12 @@ models:
         description: "This is the unique key in the table"
         data_tests:
         - unique
+  - name: s2_incremental
+    description: "this is the fact table designed as incremental table using job_posted_date column as the base for the incremental model, grain stays 1 row for 1 job posting"
+    columns:
+      - name: salary_year_avg
+        description: "This is the column that provide the monetary value for yearly salary,
+        there is many entries that are null, however for these entries, a salary_hourly_avg
+        will be available instead of yearly salary"
+      - name: job_via
+        description: "This column provides information on the platform where the job was posted"
